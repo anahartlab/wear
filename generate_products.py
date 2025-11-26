@@ -8,8 +8,8 @@ repo_root = os.path.dirname(os.path.abspath(__file__))
 os.chdir(repo_root)
 
 # === Параметры ===
-csv_path = "products.csv"
-html_path = "main.html"
+csv_path = "wear_04.csv"
+html_path = "wear_04.html"
 images_dir = "images"
 valid_exts = {".jpg", ".jpeg", ".png"}
 
@@ -27,7 +27,7 @@ soup = BeautifulSoup(html_content, "html.parser")
 
 # === Удаляем все существующие секции товаров ===
 start_tag_prefix = '<section class="u-clearfix u-section-16"'
-end_tag = '</section>'
+end_tag = "</section>"
 while True:
     start_pos = html_content.find(start_tag_prefix)
     if start_pos == -1:
@@ -35,7 +35,7 @@ while True:
     end_pos = html_content.find(end_tag, start_pos)
     if end_pos == -1:
         break
-    html_content = html_content[:start_pos] + html_content[end_pos + len(end_tag):]
+    html_content = html_content[:start_pos] + html_content[end_pos + len(end_tag) :]
 
 # === Обновляем soup после удаления секций ===
 soup = BeautifulSoup(html_content, "html.parser")
@@ -58,13 +58,16 @@ if insert_index == -1:
 
 # === Читаем CSV ===
 with open(csv_path, newline="", encoding="utf-8") as csvfile:
-    reader = csv.DictReader(csvfile, delimiter=',')
+    reader = csv.DictReader(csvfile, delimiter=",")
     # normalize headers to lowercase
     reader.fieldnames = [h.strip().lower() for h in reader.fieldnames]
 
     for row in reader:
         # normalize each key to lowercase
-        row = {k.strip().lower(): (v.strip() if v is not None else "") for k, v in row.items()}
+        row = {
+            k.strip().lower(): (v.strip() if v is not None else "")
+            for k, v in row.items()
+        }
 
         name = row.get("name", "")
         title = row.get("title", "")
@@ -72,6 +75,9 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
         stock = row.get("stock", "")
         price = row.get("price", "")
         place = row.get("place", "")
+        seo_title = row.get("seo title", title)
+        seo_description = row.get("seo description", "")
+        seo_keywords = row.get("seo keywords", "")
 
         if not name:
             continue
@@ -82,8 +88,12 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
             print(f"⚠️  Пропущен '{name}' — папка '{folder_path}' не найдена.")
             continue
 
-        all_images = [f for f in sorted(os.listdir(folder_path))
-                      if os.path.isfile(os.path.join(folder_path, f)) and os.path.splitext(f)[1].lower() in valid_exts]
+        all_images = [
+            f
+            for f in sorted(os.listdir(folder_path))
+            if os.path.isfile(os.path.join(folder_path, f))
+            and os.path.splitext(f)[1].lower() in valid_exts
+        ]
         if not all_images:
             print(f"⚠️  Пропущен '{name}' — нет изображений.")
             continue
@@ -99,7 +109,9 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
         if start_pos != -1:
             end_pos = html_content.find(end_tag, start_pos)
             if end_pos != -1:
-                html_content = html_content[:start_pos] + html_content[end_pos + len(end_tag):]
+                html_content = (
+                    html_content[:start_pos] + html_content[end_pos + len(end_tag) :]
+                )
                 insert_index = html_content.lower().find("<footer")
 
         carousel_id = f"carousel-{name[:8]}"
@@ -111,7 +123,7 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
             indicator_li = f'<li data-u-target="#{carousel_id}" data-u-slide-to="{i}" class="{active_class} u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>'
             carousel_indicators += "                          " + indicator_li + "\n"
 
-            item_div = f'''\
+            item_div = f"""\
                           <div class="{active_class} u-carousel-item u-gallery-item u-carousel-item-{i+1}" data-image-width="960" data-image-height="1280">
                             <div class="u-back-slide">
                               <img class="u-back-image u-expanded" src="images/{name}/{img_name}">
@@ -122,7 +134,7 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
                             <style data-mode="MD"></style>
                             <style data-mode="SM"></style>
                             <style data-mode="XS"></style>
-                          </div>'''
+                          </div>"""
             carousel_items += item_div + "\n"
 
         # Форматируем наличие с учетом Price и Place
@@ -139,7 +151,10 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
                 stock_html = "В наличии:"
 
         block = f"""
-    <section class="u-clearfix u-section-16" id="{name}">
+    <section class="u-clearfix u-section-16" id="{name}" 
+             data-seo-title="{seo_title}"
+             data-seo-description="{seo_description}"
+             data-seo-keywords="{seo_keywords}">
       <div class="u-clearfix u-sheet u-valign-middle-md u-valign-top-lg u-valign-top-xl u-sheet-1">
         <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -185,7 +200,9 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
     </section>"""
 
         # === Вставка перед <footer> ===
-        html_content = html_content[:insert_index] + block + "\n" + html_content[insert_index:]
+        html_content = (
+            html_content[:insert_index] + block + "\n" + html_content[insert_index:]
+        )
         insert_index += len(block)
 
 # === Сохраняем результат ===
