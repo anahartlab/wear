@@ -8,8 +8,8 @@ repo_root = os.path.dirname(os.path.abspath(__file__))
 os.chdir(repo_root)
 
 # === Параметры ===
-csv_path = "wear_04.csv"
-html_path = "wear_04.html"
+csv_path = "wear_01.csv"
+html_path = "wear_01.html"
 images_dir = "images"
 valid_exts = {".jpg", ".jpeg", ".png"}
 
@@ -186,9 +186,9 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
                   <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-2">
                     <div style="display:flex; flex-direction:column; align-items:center;">
                       <h3 class="u-align-center u-text u-text-1">{title}</h3>
-                      <p class="u-align-left u-text u-text-2" style="display:inline-block; text-align:left; max-width:100%;">{description}</p>
+                      <p class="u-align-center u-text u-text-2" style="display:inline-block; text-align:center; max-width:100%;">{description}</p>
                       <p class="u-align-center u-text u-text-availability">{stock_html}</p>
-                      <a href="https://donate.stream/anahart" class="u-btn u-button-style u-custom-font u-heading-font u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1" style="border-radius: 100px;" title="Укажите нужную сумму и наименование товара в комментарии к донату">Оплатить</a>
+                      <p class="u-align-center u-text u-text-payment"><a href="https://donate.stream/anahart" class="u-btn u-button-style u-custom-font u-heading-font u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1" style="border-radius: 100px;" title="Укажите нужную сумму и наименование товара в комментарии к донату">Оплатить</a></p>
                     </div>
                   </div>
                 </div>
@@ -209,7 +209,7 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
 with open(html_path, "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print("✅ Все товары из CSV добавлены в main.html")
+print("✅ Все товары из CSV добавлены .html")
 
 import sys
 
