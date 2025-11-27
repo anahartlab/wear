@@ -148,45 +148,40 @@
   <!-- Изменён блок section и меню -->
 
   <section class="u-clearfix u-section-hero" style="padding: 50px 0; text-align: center;">
-    <h2 style="font-family: inherit; font-weight: bold; margin-bottom: 40px;">Одежда и аксессуары</h2>
-    <div class="sections-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+    <h3 style="font-family: inherit; font-weight: bold; margin-bottom: 40px;">Одежда и аксессуары</h3>
 
-      <div class="section-card"
-        style="width: 220px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; text-align: center;">
-        <a href="wear_01.html" style="text-decoration: none; color: inherit;">
+    <div class="sections-grid">
+
+      <div class="section-card">
+        <a href="wear_01.html">
           <h3>Кастомные толстовки и футболки</h3>
           <p>Посмотреть коллекцию</p>
         </a>
       </div>
 
-      <div class="section-card"
-        style="width: 220px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; text-align: center;">
-        <a href="wear_02.html" style="text-decoration: none; color: inherit;">
+      <div class="section-card">
+        <a href="wear_02.html">
           <h3>Fullprint штаны с карманами на молниях</h3>
           <p>Посмотреть коллекцию</p>
         </a>
       </div>
 
-      <div class="section-card"
-        style="width: 220px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; text-align: center;">
-        <a href="wear_03.html" style="text-decoration: none; color: inherit;">
+      <div class="section-card">
+        <a href="wear_03.html">
           <h3>Неоновые мантии, шарфы, порео</h3>
           <p>Посмотреть коллекцию</p>
         </a>
       </div>
 
-      <div class="section-card"
-        style="width: 220px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; text-align: center;">
-        <a href="wear_04.html" style="text-decoration: none; color: inherit;">
+      <div class="section-card">
+        <a href="wear_04.html">
           <h3>Флюрные рюкзаки ANAHART</h3>
           <p>Посмотреть коллекцию</p>
         </a>
       </div>
 
-      <div class="section-card"
-        style="width: 220px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; text-align: center;">
-        <a href="https://anahartlab.github.io/patches/main.html" style="text-decoration: none; color: inherit;"
-          target="_blank">
+      <div class="section-card">
+        <a href="https://anahartlab.github.io/patches/main.html" target="_blank">
           <h3>Флуоресцентные нашивки от 100р.</h3>
           <p>Посмотреть коллекцию</p>
         </a>
@@ -195,16 +190,44 @@
     </div>
   </section>
 
-  <!-- Для горизонтального меню добавим стиль -->
   <style>
-    .u-nav-1 {
+    .sections-grid {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
 
-    .u-nav-1 li {
-      display: inline-block;
+    .section-card {
+      width: 240px;
+      height: 160px;
+      /* Фиксированная высота для ровных полок */
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* чтобы текст всегда ровно стоял */
+    }
+
+    .section-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+
+    .section-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+
+    .section-card p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.8;
     }
   </style>
   <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="footer">
