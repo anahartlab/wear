@@ -1,6 +1,6 @@
 <header class="u-clearfix u-grey-80 u-header u-header" id="header">
   <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-sheet-1">
-    <a href="main.html" class="u-image u-logo u-image-1" style="display:block; margin:20px auto 0 auto;" data-image-width="1574" data-image-height="483">
+    <a href="https://anahartlab.github.io/main.html" class="u-image u-logo u-image-1" style="display:block; margin:20px auto 0 auto;" data-image-width="1574" data-image-height="483">
       <img src="images/logoanahartclear.png" class="u-logo-image u-logo-image-1" title="Главная">
     </a>
     <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" role="navigation" style="margin-top:20px;">
@@ -22,17 +22,17 @@
       <div class="u-custom-menu u-nav-container">
         <ul class="u-custom-font u-heading-font u-nav u-unstyled u-nav-1" role="menubar">
           <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="main.html" style="padding: 10px 28px;">ГЛАВНАЯ</a></li>
+            href="https://anahartlab.github.io/main.html" style="padding: 10px 28px;">ГЛАВНАЯ</a></li>
           <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="stuff.html" style="padding: 10px 28px;">ОДЕЖДА И АКСЕССУАРЫ</a></li>
+            href="https://anahartlab.github.io/stuff.html" style="padding: 10px 28px;">ОДЕЖДА И АКСЕССУАРЫ</a></li>
           <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="pics.html" style="padding: 10px 28px;">КАРТИНЫ И ПОЛОТНА</a></li>
+            href="https://anahartlab.github.io/pics.html" style="padding: 10px 28px;">КАРТИНЫ И ПОЛОТНА</a></li>
           <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="sale.html" style="padding: 10px 28px;">СКИДКИ</a></li>
+            href="https://anahartlab.github.io/sale.html" style="padding: 10px 28px;">СКИДКИ</a></li>
           <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="maroc.html" style="padding: 10px 28px;">СУМКИ ИЗ МАРОККО</a></li>
+            href="https://anahartlab.github.io/maroc.html" style="padding: 10px 28px;">СУМКИ ИЗ МАРОККО</a></li>
           <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="radio.html" style="padding: 10px 28px;">RADIO/BLOG</a></li>
+            href="https://anahartlab.github.io/radio.html" style="padding: 10px 28px;">RADIO/BLOG</a></li>
         </ul>
       </div>
       <div class="u-custom-menu u-nav-container-collapse" id="4922" role="region" aria-label="Menu panel">
@@ -40,12 +40,12 @@
           <div class="u-inner-container-layout u-sidenav-overflow">
             <div class="u-menu-close" tabindex="-1" aria-label="Close menu"></div>
             <ul class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-right-xs u-custom-font u-heading-font u-nav u-popupmenu-items u-unstyled u-nav-2" role="menubar">
-              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="main.html">ГЛАВНАЯ</a></li>
-              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="stuff.html">ОДЕЖДА И АКСЕССУАРЫ</a></li>
-              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="pics.html">КАРТИНЫ И ПОЛОТНА</a></li>
-              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="sale.html">СКИДКИ</a></li>
-              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="maroc.html">СУМКИ ИЗ МАРОККО</a></li>
-              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="radio.html">RADIO/BLOG</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://anahartlab.github.io/main.html">ГЛАВНАЯ</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://anahartlab.github.io/stuff.html">ОДЕЖДА И АКСЕССУАРЫ</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://anahartlab.github.io/pics.html">КАРТИНЫ И ПОЛОТНА</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://anahartlab.github.io/sale.html">СКИДКИ</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://anahartlab.github.io/maroc.html">СУМКИ ИЗ МАРОККО</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://anahartlab.github.io/radio.html">RADIO/BLOG</a></li>
             </ul>
           </div>
         </div>
