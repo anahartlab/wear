@@ -181,10 +181,10 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
                       <h4 class="u-align-center u-text u-text-1">{title}</h4>
                       <p class="u-align-center u-text u-text-availability"><b> По ссылке ниже можно посмотреть 3D/AR модель через браузер Вашего телефона. <br> Google Chrome (Android) , Safari (iPhone)</b></p>
 <p class="u-align-center u-text u-text-availability">
-  <a href="https://anahartlab.github.io/ar/{name}.html"
+  <a href="https://anahartlab.github.io/ar/FULLPRINT/{name}.html"
      style="background-color:#4CAF50; color:#000; padding:8px 16px; border-radius:6px; text-decoration:none; display:inline-block;"
      title="{title}">
-    Посмотреть полотно в AR
+    Посмотреть 3D/AR модель
   </a>
 </p>   
                       <p class="u-align-left u-text u-text-2" style="display:inline-block; text-align:left; max-width:100%;">{description}</p>
