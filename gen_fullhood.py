@@ -112,7 +112,11 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
             else:
                 images = all_images
 
-        carousel_id = f"carousel-{seo_name[:8]}"
+        # Используем полностью уникальный id карусели.
+        # Обрезание до 8 символов может приводить к совпадениям.
+        carousel_base = seo_name if seo_name else name
+        carousel_base = carousel_base.replace(' ', '-').replace('/', '-').replace('\\', '-')
+        carousel_id = f"carousel-{carousel_base}"
         carousel_indicators = ""
         carousel_items = ""
 
@@ -145,6 +149,10 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
                 if stock_lines
                 else "Изготовление на заказ. Опт."
             )
+
+        # Защита от дублирующихся id на одной странице.
+        while f'id="{carousel_id}"' in html_content:
+            carousel_id += "-dup"
 
         block = f"""
     <section class="u-clearfix u-section-16" id="{seo_name}">
