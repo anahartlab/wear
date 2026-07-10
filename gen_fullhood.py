@@ -59,9 +59,9 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
 
         # --- Получаем seo_name строго из SEO_url ---
         seo_name = (
-            row.get("seo_url", "")
-            or row.get("SEO_url", "")
-            or row.get("Seo_Url", "")
+            row.get("name", "")
+            or row.get("NAME", "")
+            or row.get("Name", "")
             or ""
         ).strip()
 
