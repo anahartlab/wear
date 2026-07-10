@@ -141,7 +141,7 @@ with open(csv_path, newline="", encoding="utf-8") as csvfile:
 
         # Форматируем stock с <br> и "☀️"
         if not stock.strip():
-            stock_html = "Цифровая версия. Возможна продажа дизйайна либо изготовлени изделий оптом на заказ."
+            stock_html = "Цифровая версия. Возможна продажа дизайна либо изготовление изделий оптом."
         else:
             stock_lines = [line.strip() for line in stock.splitlines() if line.strip()]
             stock_html = (
